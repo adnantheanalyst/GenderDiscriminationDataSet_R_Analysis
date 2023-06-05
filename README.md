@@ -92,7 +92,7 @@ After that I Estimated a multiple linear with covariates Gender and Experience. 
                           lSalary = β0 + β1Gender + β2Experience + ε<br>
 or<br>
                      lSalary = β0 + β1 I(Gender=Male) + β2Experience + ε<br>
-the I wanted to explicit that Gender has an associated binary/indicator variable (dummy variable). Thus, if Gender=Female, the model was<br>
+then I wanted to explicit that Gender has an associated binary/indicator variable (dummy variable). Thus, if Gender=Female, the model was<br>
                                 lSalary = β0 + β2Experience + ε,<br>
 while if Gender=Male, the model was<br>
                             lSalary = β0 + β1 + β2Experience + ε,<br>
@@ -164,7 +164,7 @@ exp(coef(model2)[1]+ coef(model2)[3]*20)<br>
 (Intercept)<br>
 78444.41<br>
 
-Add the curve (on the original scale) to the data.<br>
+Added the curve (on the original scale) to the data.<br>
 plot(my.data$Experience, my.data$Salary, main='Salary vs Experience', xlab='Experience', ylab='Salary')<br>
 points(my.data$Experience[my.data$Gender == 'Female'], my.data$Salary[my.data$Gender == 'Female'], col='pink')<br>
 points(my.data$Experience[my.data$Gender == 'Male'], my.data$Salary[my.data$Gender == 'Male'], col='blue')<br>
