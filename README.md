@@ -27,8 +27,8 @@ levels(my.data$Gender)<br>
 [1] "Female" "Male"<br>
 table(my.data$Gender)<br>
 
-Female Male<br>
- 140    68<br>
+Female    Male<br>
+ 140      68<br>
  
 Initial description of the data.<br>
 Histogram of the salary<br>
