@@ -40,7 +40,6 @@ hist(my.data$Salary, prob=TRUE, main='Annual salary')<br>
 Boxplot of the salary<br>
 
 boxplot(my.data$Salary, las=2, col='grey', main='Annual Salary')<br>
-las=2 plots the y-labels horizontally, to make them readable<br>
 
 ![Histogram of Salary Rplot](https://github.com/adnantheanalyst/GenderDiscriminationDataSet_R_Analysis/assets/16821246/3acf9aa6-99b8-4757-b67c-5e76ffd5d467)
 
@@ -67,8 +66,6 @@ pie(table(my.data$Gender), labels=c('Female','Male'))<br>
 
 Distribution of log salary given gender<br>
 boxplot(my.data$Salary~my.data$Gender, main='Log Salary given Gender', col=c('pink','blue'), las=2, ylab='Salary', cex.axis=0.7)<br>
-cex.axis: modify the dimension of the labels, default is 1<br>
-
 
 ![Boxplot log Salary given Gender Rplot](https://github.com/adnantheanalyst/GenderDiscriminationDataSet_R_Analysis/assets/16821246/454a8364-bb96-4b2c-9903-59ccc0e4fc93)
 
@@ -92,13 +89,13 @@ legend('topleft', pch=c(19,19), c('Female','Male'), col=c('pink','blue'), bty='n
 ![Boxplot Experience given Gender Rplot](https://github.com/adnantheanalyst/GenderDiscriminationDataSet_R_Analysis/assets/16821246/293399dc-2adf-4151-8a7f-f121d2434285)
 
 Estimate a multiple linear with covariates Gender and Experience. Consider that Gender is codified so that it assumes value 0 if Gender=Female and value 1 if Gender=Male (R follows the alphabetical order; it can be changed). The model is<br>
-                           lSalary = β0 + β1Gender + β2Experience + ε<br>
+&Tab;                           lSalary = β0 + β1Gender + β2Experience + ε<br>
 or<br>
-                      lSalary = β0 + β1 I(Gender=Male) + β2Experience + ε<br>
+&Tab;                      lSalary = β0 + β1 I(Gender=Male) + β2Experience + ε<br>
 if we want to explicit that Gender has an associated binary/indicator variable (dummy variable). Thus, if Gender=Female, the model is<br>
-                                lSalary = β0 + β2Experience + ε,<br>
+&Tab;                                lSalary = β0 + β2Experience + ε,<br>
 while if Gender=Male, the model is<br>
-                              lSalary = β0 + β1 + β2Experience + ε,<br>
+&Tab;                             lSalary = β0 + β1 + β2Experience + ε,<br>
                               
 model <- lm(lSalary ~ Gender + Experience, data=my.data)<br>
 summary(model)<br>
