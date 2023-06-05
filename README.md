@@ -89,13 +89,13 @@ legend('topleft', pch=c(19,19), c('Female','Male'), col=c('pink','blue'), bty='n
 ![Boxplot Experience given Gender Rplot](https://github.com/adnantheanalyst/GenderDiscriminationDataSet_R_Analysis/assets/16821246/293399dc-2adf-4151-8a7f-f121d2434285)
 
 Estimate a multiple linear with covariates Gender and Experience. Consider that Gender is codified so that it assumes value 0 if Gender=Female and value 1 if Gender=Male (R follows the alphabetical order; it can be changed). The model is<br>
-&Tab;                           lSalary = β0 + β1Gender + β2Experience + ε<br>
+                          lSalary = β0 + β1Gender + β2Experience + ε<br>
 or<br>
-&Tab;                      lSalary = β0 + β1 I(Gender=Male) + β2Experience + ε<br>
+                     lSalary = β0 + β1 I(Gender=Male) + β2Experience + ε<br>
 if we want to explicit that Gender has an associated binary/indicator variable (dummy variable). Thus, if Gender=Female, the model is<br>
-&Tab;                                lSalary = β0 + β2Experience + ε,<br>
+                                lSalary = β0 + β2Experience + ε,<br>
 while if Gender=Male, the model is<br>
-&Tab;                             lSalary = β0 + β1 + β2Experience + ε,<br>
+                            lSalary = β0 + β1 + β2Experience + ε,<br>
                               
 model <- lm(lSalary ~ Gender + Experience, data=my.data)<br>
 summary(model)<br>
