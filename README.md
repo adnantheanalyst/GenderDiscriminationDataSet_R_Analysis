@@ -6,10 +6,10 @@ my.data <- read.csv('Gender_Discrimination.csv', sep=',') <br>
 First look at the data <br>
 
 my.data[1:3,] <br>
- Gender  Experience Salary<br>
-1 Female   15        78200<br>
-2 Female   12        66400<br>
-3 Female   15        61200<br>
+   Gender  Experience  Salary<br>
+1  Female    15         78200<br>
+2  Female    12         66400<br>
+3  Female    15         61200<br>
 
 dim(my.data)<br>
 [1] 208 3<br>
